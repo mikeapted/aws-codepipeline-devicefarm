@@ -5,12 +5,6 @@ var wd = require('wd'),
     port: 4723
   });
 
-var desiredCaps = {
-  'deviceName': 'Android Emulator',
-  'platformName': 'Android',
-  'app': '/Users/mikapted/Documents/Projects/aws-codepipeline-devicefarm/app/build/outputs/apk/debug/app-debug.apk'
-};
-
 var assert = require('assert');
 describe('AWSDeviceFarmAppTest', function () {
 
