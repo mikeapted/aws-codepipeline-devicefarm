@@ -63,3 +63,9 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+
+# test node_modules and generated files
+
+test/node_modules/*
+test/androidsampletest-1.0.0.tgz
+test/MyTest.zip
