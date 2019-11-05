@@ -69,3 +69,4 @@ fastlane/readme.md
 test/node_modules/*
 test/androidsampletest-1.0.0.tgz
 test/MyTest.zip
+appium/target/*
