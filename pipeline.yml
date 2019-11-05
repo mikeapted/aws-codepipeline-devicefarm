@@ -80,7 +80,7 @@ Metadata:
         default: "What test type should be used for testing?"
 
 Conditions: 
-  IsAppiumTest: !Equals [ !Ref TestType, "APPIUM_NODE" ]
+  IsAppiumTest: !Equals [ !Ref TestType, "APPIUM_JAVA_TESTNG" ]
 
 Resources:
   ArtifactsBucket:
