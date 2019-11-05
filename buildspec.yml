@@ -5,11 +5,8 @@ phases:
     commands:
       - chmod +x ./gradlew
       - ./gradlew assembleDebug
-      - cd test
-      - npm install
-      - npm install -g npm-bundle
-      - npm-bundle
-      - zip -r MyTest.zip *.tgz
+      - cd appium
+      - ./packageTest.sh
 artifacts:
   files:
      - './app/build/outputs/**/*.apk'
