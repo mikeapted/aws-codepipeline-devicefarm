@@ -43,7 +43,7 @@ Parameters:
     AllowedValues: 
       - BUILTIN_FUZZ
       - BUILTIN_EXPLORER
-      - APPIUM_NODE
+      - APPIUM_JAVA_TESTNG
 
 Metadata: 
   AWS::CloudFormation::Interface: 
@@ -80,7 +80,7 @@ Metadata:
         default: "What test type should be used for testing?"
 
 Conditions: 
-  IsAppiumTest: !Equals [ !Ref TestType, APPIUM_NODE ]
+  IsAppiumTest: !Equals [ !Ref TestType, "APPIUM_NODE" ]
 
 Resources:
   ArtifactsBucket:
@@ -168,8 +168,7 @@ Resources:
             App: app-debug.apk
             DevicePoolArn: !Ref DevicePoolArn
             TestType: !Ref TestType
-            Test: 
-              !If [IsAppiumTest, MyTest.zip, !Ref AWS::NoValue]
+            Test: !If [IsAppiumTest, "zip-with-dependencies.zip", !Ref "AWS::NoValue"]
           InputArtifacts:
           - Name: BuildArtifact
           Name: Test

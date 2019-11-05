@@ -13,5 +13,5 @@ phases:
 artifacts:
   files:
      - './app/build/outputs/**/*.apk'
-     - './test/**/*.zip'
+     - './appium/target/**/*.zip'
   discard-paths: yes
