@@ -15,9 +15,8 @@
 
 package Tests.AbstractBaseTests;
 
-import cucumber.api.testng.AbstractTestNGCucumberTests;
+// import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-// import Pages.HomePage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -32,7 +31,7 @@ import java.util.concurrent.TimeUnit;
  *
  * Responsible for setting up the Appium test Driver
  */
-public abstract class TestBase extends AbstractTestNGCucumberTests {
+public abstract class TestBase { //extends AbstractTestNGCucumberTests {
     /**
      * Make the driver static. This allows it to be created only once
      * and used across all of the test classes.
@@ -81,11 +80,11 @@ public abstract class TestBase extends AbstractTestNGCucumberTests {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         //Set the DesiredCapabilities capabilities only for local development
-        // capabilities.setCapability("platformName", "Android");
-        // capabilities.setCapability("deviceName", "Android Emulator");
-        // capabilities.setCapability("appPackage", "com.example.myapplication");
-        // capabilities.setCapability("appActivity", "com.example.myapplication.MainActivity");
-        // capabilities.setCapability("udid", "emulator-5554");
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("deviceName", "Android Emulator");
+        capabilities.setCapability("appPackage", "com.example.myapplication");
+        capabilities.setCapability("appActivity", "com.example.myapplication.MainActivity");
+        capabilities.setCapability("udid", "emulator-5554");
 
         driver = new AndroidDriver<MobileElement>(url, capabilities);
 

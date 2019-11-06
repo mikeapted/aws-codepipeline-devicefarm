@@ -23,7 +23,7 @@
             <artifactId>java-client</artifactId>
             <version>3.1.0</version>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>4.0.0</version>
@@ -32,7 +32,7 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>4.0.0</version>
-        </dependency>
+        </dependency> -->
     </dependencies>
 
     <build>

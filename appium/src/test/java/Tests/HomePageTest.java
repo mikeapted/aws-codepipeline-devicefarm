@@ -15,11 +15,10 @@
 
 package Tests;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-
+// import cucumber.api.CucumberOptions;
+// import cucumber.api.java.en.Given;
+// import cucumber.api.java.en.Then;
+// import cucumber.api.java.en.When;
 
 import Pages.HomePage;
 import Tests.AbstractBaseTests.TestBase;
@@ -33,12 +32,12 @@ import org.testng.annotations.Test;
  */
 
 
-@CucumberOptions(
-        strict = true,
-        monochrome = true,
-        features = "classpath:HomePageTest",
-        plugin = {"pretty"}
-)
+// @CucumberOptions(
+//         strict = true,
+//         monochrome = true,
+//         features = "classpath:HomePageTest",
+//         plugin = {"pretty"}
+// )
 public class HomePageTest extends TestBase {
     private static final String HELLO_WORLD_SUCCESS_MESSAGE = "Hello World!";
     private static final String CORRECT_MSG = "This is a test";
@@ -50,10 +49,20 @@ public class HomePageTest extends TestBase {
         return "Home Page";
     }
 
+    @Test (enabled=true) public void testHomePageSetup() throws InterruptedException {
+        setUpPage();
+        helloWorldSetupSuccess();
+    }
+
+    @Test (enabled=true) public void testHelloWorldTextSuccess() throws InterruptedException {
+        setUpPage();
+        helloWorldTextSuccess();
+    }
+
     /**
      * Creates a home page
      */
-    @Given("^I start at the home page$")
+    // @Given("^I start at the home page$")
     public void setUpPage() {
         homePage = new HomePage(driver);
     }
@@ -61,7 +70,7 @@ public class HomePageTest extends TestBase {
     /**
      * Tests home page by verifying if the hello world message is visible
      */
-    @Given("^hello world text is visible$")
+    // @Given("^hello world text is visible$")
     public void helloWorldSetupSuccess() throws InterruptedException {
         Assert.assertTrue(homePage.checkIfOnHomePage());
     }
@@ -69,7 +78,7 @@ public class HomePageTest extends TestBase {
     /**
      * Tests home page by verifying if the hello world message is correct
      */
-    @Given("^hello world text is correct$")
+    // @Given("^hello world text is correct$")
     public void helloWorldTextSuccess() throws InterruptedException {
         Assert.assertEquals(homePage.getHelloWorldMessage(), HELLO_WORLD_SUCCESS_MESSAGE);
     }
@@ -78,7 +87,7 @@ public class HomePageTest extends TestBase {
      * Tests message submission by verifying if the output message is
      * correct
      */
-    @Given("^message is correct$")
+    // @Given("^message is correct$")
     public void messageSuccess() throws InterruptedException {
         Assert.assertTrue(homePage.sendMessage(CORRECT_MSG));
         // Assert.assertEquals(loginPage.getMessage(), LOGIN_SUCCESS_MESSAGE);
