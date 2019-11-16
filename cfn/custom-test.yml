@@ -1,0 +1,64 @@
+
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Android App Test State Machine: CodePipline -> Lambda -> Step Functions'
+
+Resources:
+  StepFunctionsStateMachineRole: 
+    Type: "AWS::IAM::Role"
+    Properties: 
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Principal: 
+              Service: 
+                - !Sub "states.${AWS::Region}.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+      Path: "/"
+      Policies: 
+        - 
+          PolicyName: "lambda"
+          PolicyDocument: 
+            Version: "2012-10-17"
+            Statement: 
+              - 
+                Effect: "Allow"
+                Action: 
+                  - "lambda:InvokeFunction"
+                Resource: "*"
+  StepFunctionsStateMachine:
+    Type: AWS::StepFunctions::StateMachine 
+    Properties:
+      RoleArn: !GetAtt StepFunctionsStateMachineRole.Arn
+      DefinitionString: 
+        !Sub |
+          {
+            "Comment": "A state machine called from AWS CodePipeline that runs an Appium/Cucumber test suite using AWS Device Farm",
+            "StartAt": "Test Task",
+            "States": {
+              "NoOp": {
+                "Type": "Pass",
+                "Result": {
+                  "foo": "bar"
+                },
+                "ResultPath": "$.output",
+                "Next": "SuccessState"
+              },
+              "SuccessState": {
+                "Type": "Succeed"
+              }
+            }
+          }
+Outputs:
+  CodePipelineStepFunctionsStateMachineArn:
+    Value: !Ref StepFunctionsStateMachine
+    Export:
+      Name: !Sub "${AWS::StackName}-CodePipelineStepFunctionsStateMachineArn"
+  CodePipelineStepFunctionsStateMachineName:
+    Value: !GetAtt StepFunctionsStateMachine.Name
+    Export:
+      Name: !Sub "${AWS::StackName}-CodePipelineStepFunctionsStateMachineName"
