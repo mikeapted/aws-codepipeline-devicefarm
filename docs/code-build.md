@@ -2,7 +2,7 @@
 
 [Previous](code-commit.md) | [Next](code-pipeline.md)
 
-### Create a CodeBuild job to build our APK and test bundle
+#### Create a CodeBuild job to build our APK and test bundle
 
 1. Open the CodeBuild [console page](https://us-west-2.console.aws.amazon.com/codesuite/codebuild/projects?region=us-west-2)
 2. Click **Create build project**
@@ -10,7 +10,7 @@
   - For **Project name**, specify `aws-codepipeline-devicefarm`
   - For **Description**, specify `Our sample Android application build job`
 
-![](../images/code-build-1.png?s=200)
+![](../images/code-build-1.png)
 
 4. Under **Source**:
   - For **Source provider**, choose `AWS CodeCommit`
