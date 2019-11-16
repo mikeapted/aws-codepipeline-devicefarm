@@ -30,28 +30,8 @@ aws configure
 
 ## Instructions
 
-- [Setup a CodeCommit repository](/docs/code-commit.md)
-
-### Create a CodeBuild job to build our APK and test bundle
-
-- Open the CodeBuild [console page](https://us-west-2.console.aws.amazon.com/codesuite/codebuild/projects?region=us-west-2)
-- Click the "Create build project" button
-- Use the following values:
-  - Project name: aws-codepipeline-devicefarm
-  - Description: Our sample Android application build job
-  - Source provider: AWS CodeCommit
-  - Repository: aws-codepipeline-devicefarm
-  - Reference type: Branch
-  - Branch: master
-  - Environment image: Managed image
-  - Operating system: Ubuntu
-  - Runtime(s): Standard
-  - Service role: New service role
-  - Role name: codebuild-aws-codepipeline-devicefarm-service-role
-  - Build specifications: Use a buildspec file
-  - Artifacts: No artifacts
-  - Logs: defaults
-- Click the Create button
+- [Setup a CodeCommit repository](docs/code-commit.md)
+- [Create a CodeBuild job to build our APK and test bundle](docs/code-build.md)
 
 ### Create a CodePipeline pipeline
 
