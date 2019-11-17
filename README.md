@@ -6,6 +6,8 @@ This project shows you how to AWS Device Farm, AWS CodePipeline, and AWS Code Bu
 
 ## Architecture
 
+![](images/architecture.png)
+
 ## Project structure
 
 - **app/** - contains a sample Android application source code we will use for testing
