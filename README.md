@@ -10,9 +10,8 @@ This project shows you how to AWS Device Farm, AWS CodePipeline, and AWS Code Bu
 
 ## Project structure
 
-- **app/** - contains a sample Android application source code we will use for testing
-- **appium/** - contains or Appium UX tests
-- **cfn/** - contains a CloudFormation stack representing the resources involved
+- **cdk/** - contains a CDK app representing the CI/CD pipeline and Jenkins Fargate setup
+- **docker/** - contains the Docker file and resources used to build the Jenkins server
 - **docs/** - contains markdown for documentation
 - **images/** - contains images for documentation
 

@@ -1,0 +1,97 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.jira.JiraProjectProperty plugin="jira@3.0.11"/>
+    <com.chikli.hudson.plugin.naginator.NaginatorOptOutProperty plugin="naginator@1.18">
+      <optOut>false</optOut>
+    </com.chikli.hudson.plugin.naginator.NaginatorOptOutProperty>
+  </properties>
+  <scm class="com.amazonaws.codepipeline.jenkinsplugin.AWSCodePipelineSCM" plugin="aws-codepipeline@0.39">
+    <clearWorkspace>false</clearWorkspace>
+    <actionTypeCategory>Test</actionTypeCategory>
+    <actionTypeProvider>Jenkins</actionTypeProvider>
+    <actionTypeVersion>1</actionTypeVersion>
+    <region>us-west-2</region>
+    <awsAccessKey></awsAccessKey>
+    <awsSecretKey></awsSecretKey>
+    <proxyHost></proxyHost>
+    <proxyPort>0</proxyPort>
+    <awsClientFactory/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.SCMTrigger>
+      <spec>* * * * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
+  <concurrentBuild>true</concurrentBuild>
+  <builders/>
+  <publishers>
+    <org.jenkinsci.plugins.awsdevicefarm.AWSDeviceFarmRecorder plugin="aws-device-farm@1.27">
+      <projectName>mob-313</projectName>
+      <devicePoolName>Top Devices</devicePoolName>
+      <appArtifact>app-debug.apk</appArtifact>
+      <runName>${BUILD_TAG}</runName>
+      <testToRun>APPIUM_JAVA_TESTNG</testToRun>
+      <testSpecName>mob-313.yml</testSpecName>
+      <environmentToRun>CustomEnvironment</environmentToRun>
+      <storeResults>true</storeResults>
+      <isRunUnmetered>false</isRunUnmetered>
+      <eventCount></eventCount>
+      <eventThrottle></eventThrottle>
+      <seed></seed>
+      <username></username>
+      <password></password>
+      <appiumJavaJUnitTest></appiumJavaJUnitTest>
+      <appiumJavaTestNGTest>zip-with-dependencies.zip</appiumJavaTestNGTest>
+      <appiumPythonTest></appiumPythonTest>
+      <appiumRubyTest></appiumRubyTest>
+      <appiumNodeTest></appiumNodeTest>
+      <calabashFeatures></calabashFeatures>
+      <calabashTags></calabashTags>
+      <calabashProfile></calabashProfile>
+      <junitArtifact></junitArtifact>
+      <junitFilter></junitFilter>
+      <uiautomatorArtifact></uiautomatorArtifact>
+      <uiautomatorFilter></uiautomatorFilter>
+      <uiautomationArtifact></uiautomationArtifact>
+      <xctestArtifact></xctestArtifact>
+      <xctestFilter></xctestFilter>
+      <xctestUiArtifact></xctestUiArtifact>
+      <xctestUiFilter></xctestUiFilter>
+      <ignoreRunError>false</ignoreRunError>
+      <ifWebApp>false</ifWebApp>
+      <appiumVersionJunit>1.4.16</appiumVersionJunit>
+      <appiumVersionPython>1.4.16</appiumVersionPython>
+      <appiumVersionTestng>1.9.1</appiumVersionTestng>
+      <extraData>false</extraData>
+      <extraDataArtifact></extraDataArtifact>
+      <vpceServiceName></vpceServiceName>
+      <ifVpce>false</ifVpce>
+      <deviceLocation>false</deviceLocation>
+      <deviceLatitude>47.6204</deviceLatitude>
+      <deviceLongitude>-122.3941</deviceLongitude>
+      <radioDetails>false</radioDetails>
+      <ifWifi>true</ifWifi>
+      <ifGPS>true</ifGPS>
+      <ifNfc>true</ifNfc>
+      <ifBluetooth>true</ifBluetooth>
+      <jobTimeoutMinutes>60</jobTimeoutMinutes>
+      <ifVideoRecording>true</ifVideoRecording>
+      <ifAppPerformanceMonitoring>true</ifAppPerformanceMonitoring>
+      <ifSkipAppResigning>false</ifSkipAppResigning>
+    </org.jenkinsci.plugins.awsdevicefarm.AWSDeviceFarmRecorder>
+    <com.amazonaws.codepipeline.jenkinsplugin.AWSCodePipelinePublisher plugin="aws-codepipeline@0.39">
+      <outputArtifacts/>
+      <awsClientFactory/>
+    </com.amazonaws.codepipeline.jenkinsplugin.AWSCodePipelinePublisher>
+  </publishers>             
+  <buildWrappers/>
+</project>
