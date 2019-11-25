@@ -1,6 +1,6 @@
 [Back to main guide](../README.md) 
 
-[Previous](device-farm.md) | [Next](code-pipeline-test-built-in.md)
+[Previous](device-farm.md) | [Next](cicd-jenkins.md)
 
 #### Create and launch a test run in the AWS console
 
@@ -55,4 +55,4 @@
 
 8. Click on a device to watch the tests run live and see test run output
 
-  [Previous](device-farm.md) | [Next](code-pipeline-test-built-in.md)
+  [Previous](device-farm.md) | [Next](cicd-jenkins.md)
