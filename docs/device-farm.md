@@ -1,13 +1,16 @@
 [Back to main guide](../README.md) 
 
-[Previous](code-pipeline.md) | [Next](code-pipeline-test-built-in.md)
+[Previous](setup.md) | [Next](device-farm-console.md)
 
-#### Create a Device Farm project
+#### Create an AWS Device Farm project
 
-1. Open the CodePipeline [console page](https://us-west-2.console.aws.amazon.com/devicefarm/home?#/projects)
+1. Open the AWS Device Farm [console page](https://us-west-2.console.aws.amazon.com/devicefarm/home?#/projects)
+
 2. Click **Create a new project**
-  - For **Project name**, choose `aws-codepipeline-devicefarm`
+  - For **Project name**, choose `mob-313`
 
 ![](../images/device-farm-1.png)
 
-[Previous](code-pipeline.md) | [Next](code-pipeline-test-built-in.md)
+3. Click **Create project**
+
+[Previous](setup.md) | [Next](device-farm-console.md)

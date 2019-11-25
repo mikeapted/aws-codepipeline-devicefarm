@@ -32,16 +32,12 @@ aws configure
 
 ## Instructions
 
-- [Setup a CodeCommit repository](docs/code-commit.md)
-- [Create a CodeBuild job to build our APK and test bundle](docs/code-build.md)
-- [Create a CodePipeline pipeline](docs/code-pipeline.md)
-- [Create a Device Farm project](docs/device-farm.md)
-- [Add a Test stage and Built In test to your Code Pipeline](code-pipeline-test-built-in.md)
-- [Add an Appium JavaNG test to your Code Pipeline](code-pipeline-test-appium.md)
+1. [Setup your local environment and download artifacts](docs/setup.md)
+2. [Create a Device Farm project](docs/device-farm.md)
+3. [Create and launch a test run in the AWS console](docs/device-farm-console.md)
+3. [Deploy a CI/CD pipeline with Jenkins](cicd-jenkins.md)
 
 ### Clean Up
 
-1. Delete your AWS Code Pipeline pipeline
-2. Delete your AWS Code Build project
-3. Delete your AWS Device Farm project
-4. Delete your AWS CodeCommit repository
+1. Delete your AWS CloudFormation Stack
+2. Delete your AWS Device Farm project
