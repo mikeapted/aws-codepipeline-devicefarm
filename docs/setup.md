@@ -1,6 +1,6 @@
 [Back to main guide](../README.md) 
 
-[Next](device-farm.md)
+[Next: Create an AWS Device Farm project](device-farm.md) 
 
 #### Setup your local environment and download artifacts
 
@@ -38,4 +38,4 @@ aws iam attach-user-policy --policy-arn arn:aws:iam::aws:policy/AWSDeviceFarmFul
 aws iam create-access-key --user-name jenkins-device-farm-access > creds.json; cat creds.json
 ```
 
-[Next](device-farm.md)
+[Next: Create an AWS Device Farm project](device-farm.md) 

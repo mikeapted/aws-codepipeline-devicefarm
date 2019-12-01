@@ -65,7 +65,7 @@ export class EcsJenkinsFargateStack extends cdk.Stack {
     const jenkinsProvider = new codepipeline_actions.JenkinsProvider(this, 'JenkinsProvider', {
       providerName: 'Jenkins',
       serverUrl: fargateService.loadBalancer.loadBalancerDnsName,
-      version: '3'
+      version: '6'
     });
     jenkinsProvider.node.addDependency(fargateService);
 

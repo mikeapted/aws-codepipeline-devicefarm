@@ -1,6 +1,6 @@
 [Back to main guide](../README.md) 
 
-[Previous](device-farm.md) | [Next](cicd-jenkins.md)
+[Previous: Create an AWS Device Farm project](device-farm.md) | [Next: Deploy a CI/CD pipeline with Jenkins](cicd-jenkins.md)
 
 #### Create and launch a test run in the AWS console
 
@@ -32,6 +32,7 @@
 
   - For the file name, specify `mob-313`
   - Click **Save**
+  - Click **Next step**
 
 ![](../images/device-farm-console-5.png)
 
@@ -55,4 +56,4 @@
 
 8. Click on a device to watch the tests run live and see test run output
 
-  [Previous](device-farm.md) | [Next](cicd-jenkins.md)
+  [Previous: Create an AWS Device Farm project](device-farm.md) | [Next: Deploy a CI/CD pipeline with Jenkins](cicd-jenkins.md)

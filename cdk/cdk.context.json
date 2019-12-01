@@ -1,0 +1,76 @@
+{
+  "vpc-provider:account=493833316326:filter.isDefault=true:region=us-east-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-918b41e8",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-510dd80b",
+            "availabilityZone": "us-east-1a",
+            "routeTableId": "rtb-6322ac1b"
+          },
+          {
+            "subnetId": "subnet-ff7d439a",
+            "availabilityZone": "us-east-1b",
+            "routeTableId": "rtb-6322ac1b"
+          },
+          {
+            "subnetId": "subnet-b089569c",
+            "availabilityZone": "us-east-1c",
+            "routeTableId": "rtb-6322ac1b"
+          },
+          {
+            "subnetId": "subnet-808308c8",
+            "availabilityZone": "us-east-1d",
+            "routeTableId": "rtb-6322ac1b"
+          },
+          {
+            "subnetId": "subnet-8a684cb6",
+            "availabilityZone": "us-east-1e",
+            "routeTableId": "rtb-6322ac1b"
+          },
+          {
+            "subnetId": "subnet-11f79a1d",
+            "availabilityZone": "us-east-1f",
+            "routeTableId": "rtb-6322ac1b"
+          }
+        ]
+      }
+    ]
+  },
+  "vpc-provider:account=493833316326:filter.isDefault=true:region=us-west-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-7bd9c41c",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-e44d6483",
+            "availabilityZone": "us-west-2a",
+            "routeTableId": "rtb-83ea7ce5"
+          },
+          {
+            "subnetId": "subnet-52a2e31b",
+            "availabilityZone": "us-west-2b",
+            "routeTableId": "rtb-83ea7ce5"
+          },
+          {
+            "subnetId": "subnet-eda46eb6",
+            "availabilityZone": "us-west-2c",
+            "routeTableId": "rtb-83ea7ce5"
+          },
+          {
+            "subnetId": "subnet-2b33ff00",
+            "availabilityZone": "us-west-2d",
+            "routeTableId": "rtb-83ea7ce5"
+          }
+        ]
+      }
+    ]
+  }
+}
