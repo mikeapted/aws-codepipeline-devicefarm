@@ -34,7 +34,7 @@ aws configure
 1. [Setup your local environment and download artifacts](docs/setup.md)
 2. [Create a Device Farm project](docs/device-farm.md)
 3. [Create and launch a test run in the AWS console](docs/device-farm-console.md)
-3. [Deploy a CI/CD pipeline with Jenkins](cicd-jenkins.md)
+3. [Deploy a CI/CD pipeline with Jenkins](docs/cicd-jenkins.md)
 
 ### Clean Up
 
