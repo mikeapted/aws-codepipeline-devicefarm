@@ -2,7 +2,7 @@
 
 Welcome to the aws-codepipeline-devicefarm project.
 
-This project shows you how to AWS Device Farm, AWS CodePipeline, and AWS Code Build. The integration enables developers to build automated UX testing into their mobile development workflow.
+This project shows you how to AWS Device Farm, AWS CodePipeline, AWS Code Build and Jenkins. The integration enables developers to build automated UX testing into their mobile development workflow.
 
 ## Architecture
 
@@ -40,3 +40,4 @@ aws configure
 
 1. Delete your AWS CloudFormation Stack
 2. Delete your AWS Device Farm project
+3. Delete your IAM user
