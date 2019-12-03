@@ -8,6 +8,12 @@ This project shows you how to AWS Device Farm, AWS CodePipeline, AWS Code Build 
 
 ![](images/architecture.png)
 
+## References
+
+- https://github.com/aws-samples/aws-device-farm-sample-app-for-android
+- https://github.com/aws-samples/aws-device-farm-appium-cucumber-tests-for-sample-app
+
+
 ## Project structure
 
 - **cdk/** - contains a CDK app representing the CI/CD pipeline and Jenkins Fargate setup
