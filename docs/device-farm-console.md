@@ -1,8 +1,8 @@
+### Create and launch a test run in the AWS console
+
 [Back to main guide](../README.md) 
 
-[Previous: Create an AWS Device Farm project](device-farm.md) | [Next: Deploy a CI/CD pipeline with Jenkins](cicd-jenkins.md)
-
-#### Create and launch a test run in the AWS console
+[Previous: Create an AWS Device Farm project](device-farm.md)
 
 1. Click **Create a new run**
 
@@ -56,4 +56,4 @@
 
 8. Click on a device to watch the tests run live and see test run output
 
-  [Previous: Create an AWS Device Farm project](device-farm.md) | [Next: Deploy a CI/CD pipeline with Jenkins](cicd-jenkins.md)
+  [Next: Deploy a CI/CD pipeline with Jenkins](cicd-jenkins.md)

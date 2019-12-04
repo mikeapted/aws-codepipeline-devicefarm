@@ -1,8 +1,8 @@
+### Deploy a CI/CD pipeline with Jenkins
+
 [Back to main guide](../README.md) 
 
 [Previous: Create and launch a test run in the AWS console](device-farm-console.md)
-
-#### Deploy a CI/CD pipeline with Jenkins
 
 1. Deploy the CloudFormation stack (~5 minutes)
   - <a href="https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://reinvent2019-mob313.s3-us-west-2.amazonaws.com/template.yml&stackName=MOB-313" target="_blank">Launch Stack</a>
@@ -60,5 +60,3 @@ aws iam create-access-key --user-name jenkins-device-farm-access > creds.json; c
 9. Watch logs in Jenkins and observe the tests running in AWS Device Farm
 
 10. Once job is complete review Job overview and Jenkins dashboard
-
-[Previous: Create and launch a test run in the AWS console](device-farm-console.md)

@@ -1,8 +1,6 @@
+### Setup your local environment and download artifacts
+
 [Back to main guide](../README.md) 
-
-[Next: Create an AWS Device Farm project](device-farm.md) 
-
-#### Setup your local environment and download artifacts
 
 1. Create a working folder:
 
