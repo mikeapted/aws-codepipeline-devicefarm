@@ -14,3 +14,5 @@ cdk/node_modules/*
 cdk/bin/**/*.js
 cdk/lib/**/*.js
 cdk/test/**/*.js
+
+cdk/cdk.out

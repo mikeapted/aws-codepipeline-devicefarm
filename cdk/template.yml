@@ -386,7 +386,7 @@ Resources:
         MaximumCount: 5
         MinimumCount: 0
       Provider: Jenkins
-      Version: "6"
+      Version: "10"
       ConfigurationProperties:
         - Key: true
           Name: ProjectName
@@ -664,7 +664,7 @@ Resources:
                 Category: Test
                 Owner: Custom
                 Provider: Jenkins
-                Version: "6"
+                Version: "10"
               Configuration:
                 ProjectName: AWSDeviceFarmAppiumTest
               InputArtifacts:

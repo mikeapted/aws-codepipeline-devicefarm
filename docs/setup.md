@@ -28,14 +28,4 @@ wget https://reinvent2019-mob313.s3-us-west-2.amazonaws.com/zip-with-dependencie
 
 or open the link in your browser and save the .apk locally.
 
-4. Create a user for Jenkins to access Device Farm and Code Suite services
-
-```bash
-export AWS_DEFAULT_REGION=us-west-2
-aws iam create-user --user-name jenkins-device-farm-access
-aws iam attach-user-policy --policy-arn arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess  --user-name jenkins-device-farm-access
-aws iam attach-user-policy --policy-arn arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess --user-name jenkins-device-farm-access
-aws iam create-access-key --user-name jenkins-device-farm-access > creds.json; cat creds.json
-```
-
 [Next: Create an AWS Device Farm project](device-farm.md) 
